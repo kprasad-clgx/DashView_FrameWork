@@ -1,12 +1,7 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import { WorkFlowBuilderPage } from '../../../pageObjects/enterprise/administrationFG/workFlowBuilder.po.js';
-import { getRandomNumber } from '../../../utils/randomNumber.js';
 
-let automatedWorkflowName = `Auto${getRandomNumber(1, 10000)}`;
-let assignmentDelayDigit = `${getRandomNumber(1, 9)}`;
-let mustCompleteWithinDigit = `${getRandomNumber(1, 9)}`;
-
-test.skip('Add/Delete New Workflow validation', async ({ authenticatedPage }) => {
+test('Workflow validation', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const workFlowBuilderPage = new WorkFlowBuilderPage(page);
 

@@ -3,7 +3,7 @@ import EnterpriseAddInvoicePage from '../../../pageObjects/enterprise/companySet
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
 
-test('Add New Record in Invoices Detail', async ({ authenticatedPage }) => {
+test('Invoices Detail', async ({ authenticatedPage }) => {
   //------------Code Starts Here------------
 
   const page = authenticatedPage;

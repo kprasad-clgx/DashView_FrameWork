@@ -2,6 +2,11 @@ import { test } from '../../../fixtures/enterpriseFixtures.js';
 import EnterpriseAccountValidationPage from '../../../pageObjects/enterprise/companySetting/enterpriseAccountValidation.po.js';
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
+import { isEvans } from '../../../utils/testTags.js';
+
+
+test.skip(isEvans(), 'Skip in Evans Environment');
+
 
 test('Accounting Report With POs Validation', async ({ authenticatedPage }) => {
   //------------Code Starts Here------------

@@ -3,7 +3,7 @@ import EnterpriseAddPaymentPage from '../../../pageObjects/enterprise/companySet
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
 
-test('Add New Payment Details', async ({ authenticatedPage }) => {
+test('Payments', async ({ authenticatedPage }) => {
   //------------Code Starts Here------------
 
   const page = authenticatedPage;
