@@ -3,7 +3,7 @@ import EmployeePage from '../../../pageObjects/enterprise/administrationFG/emplo
 import employeeData from '../../../testData/enterprise/employeeData.json' with { type: 'json' };
 import { getRandomNumber } from '../../../utils/randomNumber.js';
 
-test('Verify Add New and Disable Employee Functionality', async ({ authenticatedPage }) => {
+test('Employee Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const employeePage = new EmployeePage(page);
 

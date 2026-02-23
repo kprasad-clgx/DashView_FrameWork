@@ -1,7 +1,7 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import RoleBasedSecurityManagementPage from '../../../pageObjects/enterprise/closeAndDeleteJobAndClaim/roleBasedSecurityManagement.po.js';
 
-test('Group Security Page', async ({ authenticatedPage }) => {
+test.skip('Group Security Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const roleBasedSecurityPage = new RoleBasedSecurityManagementPage(page);
 

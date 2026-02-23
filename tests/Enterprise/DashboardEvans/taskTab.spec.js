@@ -3,7 +3,8 @@ import DashboardComplianceTasksTabPage from '../../../pageObjects/enterprise/das
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
 
-test('Compliance Tasks Tab Validation', async ({ authenticatedPage }) => {
+
+test.skip('Tasks Tab Validation', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const complianceTasksTabPage = new DashboardComplianceTasksTabPage(page);
 

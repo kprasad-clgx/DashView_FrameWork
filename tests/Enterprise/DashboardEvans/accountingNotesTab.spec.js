@@ -2,6 +2,10 @@ import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import DashboardAccountingNotesPage from '../../../pageObjects/enterprise/dashboardEvans/accountingNotesTab.po.js';
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
+import { isFirstGeneral, isServiceMaster} from '../../../utils/testTags.js';
+
+test.skip(isFirstGeneral() || isServiceMaster(), 'Skip in First General or Service Master Environment');
+
 
 test('Dashboard Accounting Notes Tab Validation', async ({ authenticatedPage }) => {
   //------------Code Starts Here------------

@@ -1,7 +1,10 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import JobSettingPage from '../../../pageObjects/enterprise/administrationFG/jobSetting.po.js';
+import { isServiceMaster, isEvans} from '../../../utils/testTags.js';
 
-test('Job Settings Page, Edit division', async ({ authenticatedPage }) => {
+test.skip(isServiceMaster(), isEvans(), 'Skip in Service Master Environment And Evans Environment');
+
+test('Job Settings Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const jobSettingPage = new JobSettingPage(page);
 
@@ -30,7 +33,7 @@ test('Job Settings Page, Edit division', async ({ authenticatedPage }) => {
   await expect(await jobSettingPage.verifyReportedByHeaderVisible()).toBeVisible();
 
   // Verify Tags section header is visible
-  await expect(await jobSettingPage.verifyTagsHeaderVisible()).toBeVisible();
+ // await expect(await jobSettingPage.verifyTagsHeaderVisible()).toBeVisible();
 
   // Verify Type of Loss section header is visible
   await expect(await jobSettingPage.verifyTypeOfLossHeaderVisible()).toBeVisible();

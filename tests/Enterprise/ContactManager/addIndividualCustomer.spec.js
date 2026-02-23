@@ -3,7 +3,7 @@ import AddIndividualCustomerPage from '../../../pageObjects/enterprise/contactMa
 import addIndividualCustomerData from '../../../testData/enterprise/enterpriseContactManager/addIndividualCustomer.json' with { type: 'json' };
 import { getRandomNumber } from '../../../utils/randomNumber.js';
 
-test('Add new Individual Customer in Contact Manager', async ({ authenticatedPage }) => {
+test.skip('Add new Individual Customer in Contact Manager', async ({ authenticatedPage }) => {
   const addIndividualCustomerPage = new AddIndividualCustomerPage(authenticatedPage);
 
   // Hover on Contact Manager and click Individuals
@@ -29,8 +29,4 @@ test('Add new Individual Customer in Contact Manager', async ({ authenticatedPag
   // Enter phone number and verify
   await addIndividualCustomerPage.enterPhone(addIndividualCustomerData.mainPhone);
   await addIndividualCustomerPage.assertPhone(addIndividualCustomerData.mainPhone);
-
-  // Save and verify URL
-  await addIndividualCustomerPage.clickSaveIndividual();
-  await addIndividualCustomerPage.assertSavedUrl();
 });

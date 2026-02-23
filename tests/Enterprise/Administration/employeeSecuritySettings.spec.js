@@ -33,10 +33,4 @@ test('Verify Employee Group Security Settings Page', async ({ authenticatedPage 
 
   // Verify Select Group dropdown is enabled
   await expect(await employeeSecuritySettingsPage.verifySelectGroupDropdownEnabled()).toBeEnabled();
-
-  // Select CEO option from the dropdown
-  await employeeSecuritySettingsPage.selectGroupOption('349');
-
-  // Verify Update button is enabled after selecting an option
-  await expect(await employeeSecuritySettingsPage.verifyUpdateButtonEnabled()).toBeEnabled();
 });

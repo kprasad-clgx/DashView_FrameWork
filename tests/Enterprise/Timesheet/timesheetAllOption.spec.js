@@ -1,5 +1,9 @@
 import { test } from '../../../fixtures/enterpriseFixtures.js';
 import { TimesheetsAllOptionsPage } from '../../../pageObjects/enterprise/timesheets/timesheetsAllOptions.po.js';
+import { isFirstGeneral, isEvans, isServiceMaster} from '../../../utils/testTags.js';
+
+test.skip(isFirstGeneral() || isEvans() || isServiceMaster(), 'Skip in First General, Evans, or Service Master Environment');
+
 
 test('Timesheets All Options Page validation', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
@@ -80,5 +84,4 @@ test('Timesheets All Options Page validation', async ({ authenticatedPage }) => 
   await timesheetsPage.validateUsageReportGridHeaders(usageReportGridColumnHeaders);
 
   await timesheetsPage.validateExportToExcelButton();
-
 });

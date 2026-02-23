@@ -15,7 +15,13 @@ export function shouldSkipInEnvironment(...allowedEnvironments) {
 
   // Check if production URL
   const isProd =
-    baseUrl.includes('production') || baseUrl.includes('prod.') || currentEnv === 'production';
+    baseUrl.includes('first_general') || baseUrl.includes('fgs-ngs.net') || currentEnv === 'first_general';
+  const isPaulDavis =
+    baseUrl.toLowerCase().includes('pauldavis') || currentEnv.toLowerCase() === 'pauldavis';
+  const isServiceMaster =
+    baseUrl.toLowerCase().includes('servicemaster') || currentEnv.toLowerCase() === 'servicemaster';
+  const isEvans =
+    baseUrl.toLowerCase().includes('evans') || currentEnv.toLowerCase() === 'evans';
 
   // Check if current environment is allowed
   const isAllowed = allowedEnvironments.some(
@@ -23,28 +29,65 @@ export function shouldSkipInEnvironment(...allowedEnvironments) {
   );
 
   // Skip if production and not explicitly allowed
-  if (isProd && !allowedEnvironments.includes('production')) {
+  if (isProd && !allowedEnvironments.includes('first_general')) {
+    return true;
+  }
+  if (isPaulDavis && !allowedEnvironments.includes('pauldavis')) {
+    return true;
+  }
+  if (isServiceMaster && !allowedEnvironments.includes('servicemaster')) {
+    return true;
+  }
+  if (isEvans && !allowedEnvironments.includes('evans')) {
     return true;
   }
 
   return false;
+}
+/**
+ * Check if running in Paul Davis environment
+ * @returns {boolean}
+ */
+export function isPaulDavis() {
+  const baseUrl = config.enterprise?.baseUrl || '';
+  const env = process.env.ENV || '';
+  return baseUrl.toLowerCase().includes('pauldavis') || env.toLowerCase() === 'pauldavis';
+}
+
+/**
+ * Check if running in ServiceMaster environment
+ * @returns {boolean}
+ */
+export function isServiceMaster() {
+  const baseUrl = config.enterprise?.baseUrl || '';
+  const env = process.env.ENV || '';
+  return baseUrl.toLowerCase().includes('servicemaster') || env.toLowerCase() === 'servicemaster';
+}
+
+/**
+ * Check if running in Evans environment
+ * @returns {boolean}
+ */
+export function isEvans() {
+  const baseUrl = config.enterprise?.baseUrl || '';
+  const env = process.env.ENV || '';
+  return baseUrl.toLowerCase().includes('evans') || env.toLowerCase() === 'evans';
 }
 
 /**
  * Check if running in production
  * @returns {boolean}
  */
-export function isProduction() {
+export function isFirstGeneral() {
   const baseUrl = config.enterprise?.baseUrl || '';
   const testEnv = process.env.TEST_ENV || '';
 
   return (
-    baseUrl.includes('production') ||
-    baseUrl.includes('prod.') ||
-    baseUrl.includes('dash-ngs.net') || // Production domain
-    testEnv.toLowerCase() === 'prod' ||
-    testEnv.toLowerCase() === 'production' ||
-    process.env.ENV === 'production'
+    baseUrl.includes('first_general') ||
+    baseUrl.includes('fgs-ngs.net') || // First General specific domain
+    testEnv.toLowerCase() === 'first_general' ||
+    testEnv.toLowerCase() === 'fgs-ngs.net' ||
+    process.env.ENV === 'first_general'
   );
 }
 

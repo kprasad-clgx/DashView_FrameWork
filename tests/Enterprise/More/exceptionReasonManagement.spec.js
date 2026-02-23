@@ -1,5 +1,9 @@
 import { test } from '../../../fixtures/enterpriseFixtures.js';
 import { ExceptionReasonManagementPage } from '../../../pageObjects/enterprise/moreFg/exceptionReasonManagement.po.js';
+import { isServiceMaster} from '../../../utils/testTags.js';
+
+test.skip(isServiceMaster(), 'Skip in Service Master Environment');
+
 
 test('Exception Reason Management in More FG', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

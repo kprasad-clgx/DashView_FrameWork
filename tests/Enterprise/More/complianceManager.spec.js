@@ -1,7 +1,7 @@
 import { test } from '../../../fixtures/enterpriseFixtures.js';
 import { ComplianceManagerPage } from '../../../pageObjects/enterprise/moreFg/complianceManager.po.js';
 
-test('Claim Center Page in More...', async ({ authenticatedPage }) => {
+test('Compliance Manager Page in More...', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const complianceManagerPage = new ComplianceManagerPage(page);
 

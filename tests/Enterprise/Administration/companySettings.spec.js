@@ -3,6 +3,10 @@ import {
   CompanySettingsPage,
   companySettingsExpectedValues,
 } from '../../../pageObjects/enterprise/administrationFG/companySettings.po.js';
+import { isEvans, isPaulDavis} from '../../../utils/testTags.js';
+
+
+test.skip(isEvans(), isPaulDavis(), 'Skip in First General Environment And Paul Davis Environment');
 
 test('Company Settings Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

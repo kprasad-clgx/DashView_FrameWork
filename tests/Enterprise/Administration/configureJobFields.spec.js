@@ -1,5 +1,9 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import ConfigureJobFieldsPage from '../../../pageObjects/enterprise/administrationFG/configureJobFields.po.js';
+import { isFirstGeneral, isEvans, isPaulDavis} from '../../../utils/testTags.js';
+
+test.skip(isFirstGeneral(), isEvans(), isPaulDavis(), 'Skip in First General Environment And Evans Environment And Paul Davis Environment');
+
 
 test('Configure Job Fields Page validation', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

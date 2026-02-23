@@ -73,7 +73,4 @@ test('Biz Dev Dashboard Page validation', async ({ authenticatedPage }) => {
   await expect(await bizDevDashboardPage.verifyEmployeeSelected(selectedEmployee)).toHaveValue(
     selectedEmployee,
   );
-
-  // Wait for network to stabilize
-  await bizDevDashboardPage.waitForNetworkIdle();
 });

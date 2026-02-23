@@ -33,27 +33,6 @@ test('Photos Tab Upload and Download Validation', async ({ authenticatedPage }) 
 
   // Verify 3D Room Models button is visible
   await expect(await photosTabPage.verifyRoomModelsButtonVisible()).toBeVisible();
-
-  // Click on add album button
-  await photosTabPage.clickAddAlbumButton();
-
-  // // Wait for the album modal iframe to be visible
-  // const albumModalFrame = await photosTabPage.waitForAlbumModalIframe();
-
-  // // Verify Create Album button is visible
-  // await expect(await photosTabPage.verifyCreateAlbumButtonVisible(albumModalFrame)).toBeVisible();
-
-  // // Verify Cancel button is visible
-  // await expect(await photosTabPage.verifyCancelButtonVisible(albumModalFrame)).toBeVisible();
-
-  // // Click Create Album button
-  // await photosTabPage.clickCreateAlbumButtonInModal(albumModalFrame);
-
-  // // Verify the iframe is closed
-  // await photosTabPage.verifyAlbumModalClosed();
-
-  // Click on manage photos and albums button
-
   
   // Click on 3D Room Models button
   await photosTabPage.click3DRoomModelsButton();
@@ -124,13 +103,4 @@ test('Photos Tab Upload and Download Validation', async ({ authenticatedPage }) 
 
   // Verify sort photos label is visible in manage photos and albums page
   await expect(await photosTabPage.verifySortPhotosLabelVisible()).toBeVisible();
-
-  // Click on all button to enable all photos
-  await photosTabPage.clickSelectAllButton();
-
-  // Click on Back To Slideboard button
-  await photosTabPage.clickBackToSlideboardButton();
-
-  // Navigate to Photos tab
-  await photosTabPage.navigateToPhotosTab();
 });

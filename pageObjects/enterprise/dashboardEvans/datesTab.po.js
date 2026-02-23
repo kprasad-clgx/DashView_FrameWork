@@ -308,7 +308,7 @@ class DashboardDatesTabPage {
   }
 
   async clickDateOfTargetCompletionCalendarButton() {
-    const calendarButton = this.page.locator('#TargetCompletionCalendarButton'); // <-- Use correct selector
+    const calendarButton = this.page.locator('#TargetCompletionCalendarButton'); 
     await calendarButton.click();
   }
 

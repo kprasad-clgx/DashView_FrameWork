@@ -1,5 +1,9 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import ContactCategoryPage from '../../../pageObjects/enterprise/administrationFG/contactCategory.po.js';
+import { isEvans} from '../../../utils/testTags.js';
+
+test.skip(isEvans(), 'Skip in Evans Environment');
+
 
 test('Contact Category Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

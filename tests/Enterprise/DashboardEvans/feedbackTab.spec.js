@@ -2,6 +2,9 @@ import { test } from '../../../fixtures/enterpriseFixtures.js';
 import FeedbackTabPage from '../../../pageObjects/enterprise/dashboardEvans/feedbackTab.po.js';
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
+import { isPaulDavis } from '../../../utils/testTags.js';
+
+test.skip(isPaulDavis(), 'Skip in Paul Davis Environment');
 
 test('Feedback Tab Validation', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
