@@ -1,9 +1,5 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import { ShowAdminJobPage } from '../../../pageObjects/enterprise/administrationFG/showAdminJob.po.js';
-import { isFirstGeneral} from '../../../utils/testTags.js';
-
-test.skip(isFirstGeneral(), 'Skip in First General Environment');
-
 
 test('Show Admin Job Only in Grid', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

@@ -3,7 +3,7 @@ import EnterpriseCompanySettingPage, {
   EnterpriseCompanySettingLocators,
 } from '../../../pageObjects/enterprise/companySetting/enterpriseCompanySetting.po.js';
 
-test.skip('Verify Company Setting Page', async ({ authenticatedPage }) => {
+test('Verify Company Setting Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const companySettingPage = new EnterpriseCompanySettingPage(page);
 

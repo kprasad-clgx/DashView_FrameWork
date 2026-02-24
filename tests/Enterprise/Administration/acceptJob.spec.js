@@ -1,6 +1,8 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import AcceptJobPage from '../../../pageObjects/enterprise/administrationFG/acceptJob.po.js';
 
+
+
 test('Accept Job Page', async ({ authenticatedPage: page }) => {
   const acceptJobPage = new AcceptJobPage(page);
 

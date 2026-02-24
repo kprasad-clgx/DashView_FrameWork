@@ -1,8 +1,5 @@
 import { test } from '../../../fixtures/enterpriseFixtures.js';
 import { EquipmentAndTrackingPage } from '../../../pageObjects/enterprise/moreFg/equipmentAndTracking.po.js';
-import { isEvans} from '../../../utils/testTags.js';
-
-test.skip(isEvans(), 'Skip in Evans Environment');
 
 test('Equipment And Tracking in More FG', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

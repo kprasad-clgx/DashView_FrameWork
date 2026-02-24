@@ -2,10 +2,6 @@ import { test } from '../../../fixtures/enterpriseFixtures.js';
 import EnterpriseJobCostingPage from '../../../pageObjects/enterprise/companySetting/enterpriseJobCosting.po.js';
 import jobNumberData from '../../../testData/enterprise/commonJobNumber.json' with { type: 'json' };
 import { searchJobNumber } from '../../../utils/searchJobNumber.js';
-import { isEvans } from '../../../utils/testTags.js';
-
-test.skip(isEvans(), 'Skip in Evans Environment');
-
 
 test('Job Costing Validation', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

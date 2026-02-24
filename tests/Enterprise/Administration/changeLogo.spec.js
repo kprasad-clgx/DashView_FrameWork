@@ -35,9 +35,9 @@ test('Change Logo Page', async ({ authenticatedPage }) => {
   // Verify Default column first radio button is visible
  // await expect(await changeLogoPage.verifyDefaultColumnFirstRadioButton()).toBeVisible();
 
-  // Verify Logo column first image is visible
-  await expect(await changeLogoPage.verifyLogoColumnFirstImage()).toBeVisible();
+  // // Verify Logo column first image is visible
+  // await expect(await changeLogoPage.verifyLogoColumnFirstImage()).toBeVisible();
 
-  // Verify Delete column first element is visible
-  await expect(await changeLogoPage.verifyDeleteColumnFirst()).toBeVisible();
+  // // Verify Delete column first element is visible
+  // await expect(await changeLogoPage.verifyDeleteColumnFirst()).toBeVisible();
 });

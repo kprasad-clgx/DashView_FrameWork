@@ -1,8 +1,5 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import JobSettingPage from '../../../pageObjects/enterprise/administrationFG/jobSetting.po.js';
-import { isServiceMaster, isEvans} from '../../../utils/testTags.js';
-
-test.skip(isServiceMaster(), isEvans(), 'Skip in Service Master Environment And Evans Environment');
 
 test('Job Settings Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;

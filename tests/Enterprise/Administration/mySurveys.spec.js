@@ -1,9 +1,5 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import { MySurveysPage } from '../../../pageObjects/enterprise/administrationFG/mySurveys.po.js';
-import { isEvans} from '../../../utils/testTags.js';
-
-test.skip(isEvans(), 'Skip in Evans Environment');
-
 
 test('My Survey Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
