@@ -1,7 +1,6 @@
 import { test, expect } from '../../../fixtures/enterpriseFixtures.js';
 import ChangeLogoPage from '../../../pageObjects/enterprise/administrationFG/changeLogo.po.js';
 
-
 test('Change Logo Page', async ({ authenticatedPage }) => {
   const page = authenticatedPage;
   const changeLogoPage = new ChangeLogoPage(page);
@@ -29,13 +28,4 @@ test('Change Logo Page', async ({ authenticatedPage }) => {
 
   // Verify Delete column header is visible
   await expect(await changeLogoPage.verifyDeleteGridHeader()).toBeVisible();
-
-  // Verify Default column first radio button is visible
- // await expect(await changeLogoPage.verifyDefaultColumnFirstRadioButton()).toBeVisible();
-
-  // // Verify Logo column first image is visible
-  // await expect(await changeLogoPage.verifyLogoColumnFirstImage()).toBeVisible();
-
-  // // Verify Delete column first element is visible
-  // await expect(await changeLogoPage.verifyDeleteColumnFirst()).toBeVisible();
 });
