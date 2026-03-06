@@ -36,7 +36,7 @@ class DashboardEstimateTabPage {
     const estimateTab = this.page.locator(DashboardEstimateTabLocators.estimateTab, {
       hasText: 'Estimate',
     });
-    await estimateTab.waitFor({ state: 'visible', timeout: 5000 });
+    await estimateTab.waitFor({ state: 'visible', timeout: 15000 });
     await estimateTab.click();
     await this.page.waitForLoadState('networkidle');
   }

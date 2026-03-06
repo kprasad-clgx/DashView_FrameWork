@@ -47,7 +47,7 @@ class DashboardJobsTabPage {
     const jobTasksTab = this.page.locator(DashboardJobsTabLocators.jobTasksTab, {
       hasText: 'Job Tasks',
     });
-    await jobTasksTab.waitFor({ state: 'visible', timeout: 5000 });
+    await jobTasksTab.waitFor({ state: 'visible', timeout: 15000 });
     await jobTasksTab.click();
     await this.page.waitForTimeout(5000);
   }

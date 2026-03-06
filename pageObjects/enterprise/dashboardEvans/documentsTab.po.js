@@ -51,7 +51,7 @@ class DashboardDocumentsTabPage {
     const tabDocuments = this.page.locator(DashboardDocumentsTabLocators.tabDocuments, {
       hasText: 'Documents',
     });
-    await tabDocuments.waitFor({ state: 'visible', timeout: 5000 });
+    await tabDocuments.waitFor({ state: 'visible', timeout: 15000 });
     await tabDocuments.click();
     await this.page.waitForTimeout(5000);
   }

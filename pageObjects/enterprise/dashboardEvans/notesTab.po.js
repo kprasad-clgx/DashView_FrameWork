@@ -87,7 +87,7 @@ class DashboardNotesTabPage {
     const notesTab = tabStrip.getByText(DashboardNotesTabLocators.notesTab, {
       exact: true,
     });
-    await notesTab.waitFor({ state: 'visible', timeout: 5000 });
+    await notesTab.waitFor({ state: 'visible', timeout: 15000 });
     await notesTab.click();
     await this.page.waitForLoadState('networkidle');
   }

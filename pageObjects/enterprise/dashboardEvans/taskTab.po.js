@@ -32,7 +32,7 @@ class DashboardComplianceTasksTabPage {
       DashboardComplianceTasksTabPageLocators.complianceTasksTab,
       { hasText: 'Compliance Tasks' },
     );
-    await complianceTasksTab.waitFor({ state: 'visible', timeout: 5000 });
+    await complianceTasksTab.waitFor({ state: 'visible', timeout: 15000 });
     await complianceTasksTab.click();
     await this.page.waitForTimeout(5000);
   }

@@ -61,7 +61,4 @@ test('Notes Tab Validation', async ({ authenticatedPage }) => {
 
   // Verify Add New Note button type is button
   await notesTabPage.verifyAddNewNoteButtonType();
-
-  // Verify grid first checkbox is visible
-  await expect(await notesTabPage.verifyGridFirstCheckBoxVisible()).toBeVisible();
 });

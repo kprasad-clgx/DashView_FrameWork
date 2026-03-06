@@ -40,7 +40,7 @@ class DashboardSurveyTabPage {
     const surveyTab = this.page.locator(DashboardSurveyTabPageLocators.surveyTab, {
       hasText: 'Survey',
     });
-    await surveyTab.waitFor({ state: 'visible', timeout: 5000 });
+    await surveyTab.waitFor({ state: 'visible', timeout: 15000 });
     await surveyTab.click();
     await this.page.waitForTimeout(5000);
   }

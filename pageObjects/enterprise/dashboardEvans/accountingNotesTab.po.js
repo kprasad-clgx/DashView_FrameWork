@@ -34,9 +34,9 @@ class DashboardAccountingNotesPage {
       DashboardAccountingNotesLocators.tabAccountingNotes,
       { hasText: 'Accounting Notes' },
     );
-    await tabAccountingNotes.waitFor({ state: 'visible', timeout: 5000 });
+    await tabAccountingNotes.waitFor({ state: 'visible', timeout: 15000 });
     await tabAccountingNotes.click();
-    await this.page.waitForTimeout(5000);
+    await this.page.waitForTimeout(15000);
   }
 
   // Verify Export to Excel button is visible

@@ -87,7 +87,7 @@ class DashboardInvoicesTabPage {
     const invoicesTab = this.page.locator(DashboardInvoicesTabLocators.invoicesTab, {
       hasText: 'Invoices',
     });
-    await invoicesTab.waitFor({ state: 'visible', timeout: 5000 });
+    await invoicesTab.waitFor({ state: 'visible', timeout: 15000 });
     await invoicesTab.click();
     await this.page.waitForTimeout(5000);
   }

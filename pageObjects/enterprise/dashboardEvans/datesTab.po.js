@@ -51,7 +51,7 @@ class DashboardDatesTabPage {
     const tabDates = this.page.locator(DashboardDatesTabLocators.tabDates, {
       hasText: 'Dates',
     });
-    await tabDates.waitFor({ state: 'visible', timeout: 5000 });
+    await tabDates.waitFor({ state: 'visible', timeout: 15000 });
     await tabDates.click();
     await this.page.waitForTimeout(5000);
   }

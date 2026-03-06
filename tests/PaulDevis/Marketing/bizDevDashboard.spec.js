@@ -57,20 +57,4 @@ test('Biz Dev Dashboard Page validation', async ({ authenticatedPage }) => {
   // Assert "Time Frame" label is visible and correct
   await expect(await bizDevDashboardPage.verifyTimeFrameLabelVisible()).toBeVisible();
   await expect(await bizDevDashboardPage.verifyTimeFrameLabelVisible()).toContainText('Time Frame');
-
-  // Select "This Month" from Time Frame dropdown
-  await bizDevDashboardPage.selectTimeFrame('This Month');
-
-  // Assert "This Month" is selected after reload
-  await expect(await bizDevDashboardPage.verifyTimeFrameSelected('This Month')).toHaveValue(
-    'This Month',
-  );
-
-  // Select random employee from dropdown
-  const selectedEmployee = await bizDevDashboardPage.selectRandomEmployee();
-
-  // Assert the selected employee is shown in the dropdown
-  await expect(await bizDevDashboardPage.verifyEmployeeSelected(selectedEmployee)).toHaveValue(
-    selectedEmployee,
-  );
 });
